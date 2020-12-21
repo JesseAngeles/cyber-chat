@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/pages/chat-app-page.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/colors/default-dark.css" id="theme" rel="stylesheet">
+</head>
+
+<body class="single-column card-no-border fix-sidebar">
+    <div id="main-wrapper">
+        <div class="page-wrapper" style="background-image:url(../assets/images/background/chat-black.jpg);">
+            <div class="container-fluid">
+                <div class="row animated fadeIn">
+                    <div class="col-12">
+                        <div class="card m-b-0" style="background-color: transparent;">
+                            <div class="chat-main-box">
+                                <div class="chat-right-aside">
+                                    <div class="chat-rbox" style="background-color: transparent">
+                                        <ul class="chat-list p-20" id="divChatbox">
+                                        </ul>
+                                    </div>
+                                    <div class="card-body b-t" style="background-color:#151618; border-radius: 10px;">
+                                        <form id="formEnviar">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <input type="text" autocomplete="off" id="txtMensaje" class="form-control" style="background-color: #151618; color: white;" placeholder="Escribe un mensaje" autofocus>
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <button type="submit" class="btn btn-circle btn-lg"><i class="fa fa-paper-plane-o"></i> </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="chat-left-aside" style="background-color: #151618">
+                                    <div class="open-panel"><i class="ti-angle-right"></i></div>
+                                    <div class="chat-left-inner">
+                                        <ul class="chatonline style-none" id="divUsuarios"> </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+
+    <script src="js/socket-chat-jquery.js"></script>
+
+    <script src="js/socket-chat.js"></script>
+
+</body>
+
+</html>
